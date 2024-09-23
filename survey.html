@@ -5,237 +5,209 @@
     <!-- Meta information for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <!-- Title of the webpage displayed in the browser tab -->
     <title>Campus Visit Survey</title>
-    
     <!-- Linking Google Fonts for styling -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    
     <!-- Linking W3.CSS for layout and styling -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
-    <!-- Linking Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <!-- Favicon for the webpage -->
     <link rel="icon" type="image/png" href="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/georgemason.sidearmsports.com/responsive_2021/images/svgs/logo_alternate.svg">
 </head>
 
-<body class="w3-black">
-    <!-- Embedded CSS styling specific to this page -->
-    <style>
-        /* General font settings for the page and headings */
-        body, h1, h2, h3, h4, h5, h6 {
-            font-family: "Baskerville";
-        }
-        
-        /* Margin settings for images inside a w3-row-padding class */
-        .w3-row-padding img {
-            margin-bottom: 12px;
-        }
-        
-        /* Sidebar styling, including width and background color */
-        .w3-sidebar {
-            width: 120px;
-            background-color: #006633;
-        }
-        
-        /* Main content area styling, adjusted to avoid sidebar overlap */
-        #main {
-            margin-left: 120px;
-            background-color: #000000; 
-        }
-        
-        /* Hero section styling for the top of the page */
-        .hero {
-            background-image: url('https://source.unsplash.com/1600x500/?university');
-            background-size: cover;
-            background-position: center;
-            padding: 100px 0;
-            color: white;
-            text-align: center;
-        }
-        
-        /* Hero section heading styles */
-        .hero h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3.5rem;
-            color: #FFCC33;
-            text-shadow: 0 0 10px rgba(255, 204, 51, 0.8), 0 0 20px rgba(255, 204, 51, 0.6);
-        }
-        
-        /* Hero section paragraph styles */
-        .hero p {
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(0, 102, 51, 0.8), 0 0 20px rgba(0, 102, 51, 0.6);
-        }
 
-        /* Section heading styles */
-        .section h2 {
-            color: #FFCC33;
-            font-family: 'Poppins', sans-serif;
-            font-size: 2rem;
-            text-align: center;
-        }
+<!-- Styling with CSS (embedded) -->
 
-        /* Section paragraph styles */
-        .section p {
-            color: #fff;
-            font-size: 1.1rem;
-        }
+<!-- Body Styling -->
+    <body class="w3-black">
+        <style>
+            body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Baskerville";
+    }
+    .w3-row-padding img {
+        margin-bottom: 12px;
+    }
+    .w3-sidebar {
+        width: 120px;
+        background-color: #006633;
+    }
+    #main {
+        margin-left: 120px;
+        background-color: #000000; 
+    }
+    .hero {
+        background-image: url('https://source.unsplash.com/1600x500/?university');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        color: white;
+        text-align: center;
+    }
+    .hero h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 3.5rem;
+        color: #FFCC33;
+        text-shadow: 0 0 10px rgba(255, 204, 51, 0.8), 0 0 20px rgba(255, 204, 51, 0.6);
+    }
+    .hero p {
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(0, 102, 51, 0.8), 0 0 20px rgba(0, 102, 51, 0.6);
+    }
+    .section h2 {
+        color: #FFCC33;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .section p {
+        color: #fff;
+        font-size: 1.1rem;
+    }
 
-        /* Sidebar link styles */
-        .w3-sidebar a {
-            font-family: 'Poppins', sans-serif;
-            color: #FFCC33;
-        }
+    /* sidebar styles */
+    .w3-sidebar a {
+        font-family: 'Poppins', sans-serif;
+        color: #FFCC33;
+    }
+    .w3-sidebar a:hover {
+        background-color: #FFCC33;
+        color: #000;
+    }
+    /* footer styles */
+    .footer {
+        background-color: #006633;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    .footer a {
+        color: #FFCC33;
+        text-align: center;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
 
-        /* Sidebar link hover effect */
-        .w3-sidebar a:hover {
-            background-color: #FFCC33;
-            color: #000;
-        }
-
-        /* Footer styling */
-        .footer {
-            background-color: #006633;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Footer link styles */
-        .footer a {
-            color: #FFCC33;
-            text-align: center;
-        }
-
-        /* Footer link hover effect */
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Table layout and width */
-        table {
-            table-layout: fixed;
-            width: 100%;
-        }
-
-        /* Table cell padding and alignment */
-        table th, table td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        /* Set column widths in the table */
-        table th:nth-child(1),
-        table td:nth-child(1) {
-            width: 20%;
-        }
-        table th:nth-child(2),
-        table td:nth-child(2) {
-            width: 60%;
-        }
-        table th:nth-child(3),
-        table td:nth-child(3) {
-            width: 20%;
-        }
-
-        /* Hover effect for card elements */
-        .w3-col .w3-card-4 {
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Styles when hovering over card elements */
-        .w3-card-4:hover {
-            background-color: #FFCC33 !important;
-            color: #006633 !important;
-            cursor: pointer;
-            transform: scale(1.05); 
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
-        }
-
-        /* Specific styling for survey form */
-        .survey-form {
-            background: linear-gradient(135deg, #006633, #000000);
-            color: #ffffff; 
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
-        }
-
-        /* Required field indicator */
-        .required {
-            color: red;
-        }
-
-        /* Styling for the heading box in the hero section */
-        .heading-box {
-            border: 5px solid #006633; 
-            padding: 20px;
-            width: fit-content;
-            margin: 0 auto;
-            box-shadow: 0 8px 16px rgba(184, 152, 9, 0.541); 
-            background-color: rgba(0, 0, 0, 0.1); 
-            display: inline-block;
-        }
+    /* form styling options */
+    .w3-col .w3-card-4 {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .w3-card-4:hover {
+        background-color: #FFCC33 !important;
+        color: #006633 !important;
+        cursor: pointer;
+        transform: scale(1.05); 
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
+        transition: transform 0.3s, background-color 0.3s, color 0.3s; 
+    }
+    .w3-card-5:hover {
+        background-color: #006633 !important;
+        color: #FFCC33  !important; 
+        cursor: pointer;
+        transform: scale(1.05); 
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
+        transition: transform 0.3s, background-color 0.3s, color 0.3s; 
+    }
+    .active-card {
+        background-color: #006633 !important;
+        color: #FFCC33!important; 
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    }
+    .w3-sidebar a:hover{
+        color: #FFCC33; 
+    }
+    .survey-form label {
+        color: white;
+    }
+    .survey-form {
+        background: linear-gradient(135deg, #006633, #000000);
+        color: #ffffff; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+        transition: background 0.3s ease;
+    }
+    .survey-form:hover {
+        background: linear-gradient(135deg, #FFCC33, #000000); 
+        color: #006633; 
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
+        Label { color: white !important; 
+        }   
+    }
+    .survey-form label {
+        color: white !important; 
+    }
+    .survey-form h2 {
+        color: white !important; 
+    }
+    .survey-form input,
+    .survey-form input::placeholder {
+        color: white !important; 
+        border-color: white !important;
+        background-color: rgba(0, 0, 0, 0.3) !important; 
+    }
+    .required
+    {
+        color: red;
+    }
+    .heading-box {
+        border: 5px solid #006633; 
+        padding: 20px;
+        width: fit-content;
+        margin: 0 auto;
+        box-shadow: 0 8px 16px rgba(184, 152, 9, 0.541); 
+        background-color: rgba(0, 0, 0, 0.1); 
+        display: inline-block;
+        text-align: center;
+        margin-left: -110px; 
+        margin-top: 10px;
+        }  
     </style>
 
-    <!-- Main content container -->
+
     <div class="w3-padding-large" id="main">
-        <!-- Hero section displaying the title and introduction -->
         <section class="hero">
             <div class="heading-box">
-                <h1 style="text-align: left; margin-left: 10;">GMU Campus Visit Survey</h1>
-                <p style="text-align: left; margin-left: 20%;">We would love to hear your feedback about your recent campus visit!</p>
+                <!-- form Heading -->
+            <h1 style="text-align: left; margin-left: 10;">GMU Campus Visit Survey</h1>
+            <p style="text-align: left; margin-left: 20%;">We would love to hear your feedback about your recent campus visit !</p>
             </div>
         </section>
 
-        <!-- Survey form section -->
+        <!-- Survey form inputs -->
         <section class="w3-content w3-text-grey w3-justify" style="padding: 10px;">
             <form class="w3-container w3-card-4 w3-green survey-form" style="padding: 20px; border-radius: 10px; color: white;width: 100%; margin: 0 auto; margin-left: -5%;" autocomplete="on">
-                
-                <!-- Full Name input field -->
                 <label for="username" class="w3-text-dark-grey" style="color: white;">Full Name <span class="required"> * </span></label>
-                <input class="w3-input w3-border w3-margin-bottom" id="username" type="text" name="username" required placeholder="e.g., Abirami Gurumoorthy" autocomplete="name" autofocus>
-                
-                <!-- GMU NetID input field -->
+                <input class="w3-input w3-border w3-margin-bottom" id="username" type="text" name="username" required placeholder="e.g., Abirami gurumoorthy" autocomplete="name" autofocus>
+
                 <label for="netid" class="w3-text-dark-grey" style="color: white;">GMU NetID</label>
-                <input class="w3-input w3-border w3-margin-bottom" id="gmunetid" type="text" name="netid" placeholder="e.g., agurumoo" autocomplete="username">
+                <input class="w3-input w3-border w3-margin-bottom" id="gmunetid" type="text" name="netid" placeholder="e.g., agurumoo" autocomplete="username">                
                 
-                <!-- Street Address input field -->
                 <label for="address" class="w3-text-dark-grey">Street Address</label>
                 <input class="w3-input w3-border w3-margin-bottom" id="address" type="text" name="address" placeholder="e.g., 1234 Mason St" autocomplete="street-address">
-                
-                <!-- City input field -->
+            
                 <label for="city" class="w3-text-dark-grey">City<span class="required"> * </span></label>
                 <input class="w3-input w3-border w3-margin-bottom" id="city" type="text" name="city" required placeholder="e.g., Fairfax" autocomplete="city">
-                
-                <!-- State input field -->
+            
                 <label for="state" class="w3-text-dark-grey">State<span class="required"> * </span></label>
                 <input class="w3-input w3-border w3-margin-bottom" id="state" type="text" name="state" required placeholder="e.g., VA" autocomplete="state">
-                
-                <!-- Zip Code input field -->
+            
                 <label for="zip" class="w3-text-dark-grey">Zip Code<span class="required"> * </span></label>
                 <input class="w3-input w3-border w3-margin-bottom" id="zip" type="text" name="zip" required placeholder="e.g., 22030" autocomplete="postal-code">
-                
-                <!-- Telephone Number input field -->
+            
                 <label for="telephone" class="w3-text-dark-grey">Telephone Number<span class="required"> * </span></label>
                 <input class="w3-input w3-border w3-margin-bottom" id="telephone" type="tel" name="telephone" required placeholder="e.g., 555-123-4567" autocomplete="tel">
-                
-                <!-- Email Address input field -->
+            
                 <label for="email" class="w3-text-dark-grey">Email Address<span class="required"> * </span></label>
                 <input class="w3-input w3-border w3-margin-bottom" id="email" type="email" name="email" required placeholder="e.g., agurumoo@gmu.edu" autocomplete="email">
-                
-                <!-- Website/URL input field -->
+            
                 <label for="url" class="w3-text-dark-grey">Website/URL</label>
                 <input class="w3-input w3-border w3-margin-bottom" id="url" type="url" name="url" placeholder="e.g., https://www.example.com" autocomplete="url">
-                
-                <!-- Date of survey input field -->
+
                 <label for="date" class="w3-text-dark-grey">Date of Survey<span class="required"> * </span></label>
                 <input class="w3-input w3-border w3-margin-bottom" id="date" type="date" name="date" required>
-                
-                <!-- Liked aspects of the campus (checkboxes) -->
+
                 <label class="w3-text-dark-grey" style="color: white;">What did you like most about the campus?<span class="required"> * </span></label>
+
                 <div class="w3-margin-bottom">
                     <input class="w3-check" type="checkbox" id="students" name="liked_most" value="Students">
                     <label for="students" style="color: white;">Students</label><br>
@@ -255,8 +227,6 @@
                     <input class="w3-check" type="checkbox" id="sports" name="liked_most" value="Sports">
                     <label for="sports" style="color: white;">Sports</label><br>
                 </div>
-
-                <!-- Radio buttons for source of university interest -->
                 <label class="w3-text-dark-grey" style="color: white;">How did you become interested in the university?<span class="required"> * </span></label>
                 <div class="w3-margin-bottom">
                     <input class="w3-radio" type="radio" id="friends" name="interest_source" value="Friends" required>
@@ -271,12 +241,9 @@
                     <input class="w3-radio" type="radio" id="other" name="interest_source" value="Other" required>
                     <label for="other" style="color: white;">Other</label><br>
                 </div>
-
-                <!-- Additional comments section -->
                 <label for="comments" class="w3-text-dark-grey" style="color: white;">Additional Comments</label>
                 <textarea class="w3-input w3-border w3-margin-bottom" id="comments" name="comments" rows="4" placeholder="Enter any additional comments here"></textarea>
-                
-                <!-- Graduation month and year input -->
+
                 <label for="grad_month" class="w3-text-dark-grey" style="color: white;">High-School Graduation Month<span class="required"> * </span></label>
                 <input list="months" id="grad_month" name="grad_month" class="w3-input w3-border w3-margin-bottom" placeholder="Select or type month" required>
                 <datalist id="months">
@@ -294,11 +261,9 @@
                     <option value="December">
                 </datalist>
 
-                <!-- High-school graduation year input -->
                 <label for="grad_year" class="w3-text-dark-grey" style="color: white;">High-School Graduation Year<span class="required"> * </span></label>
                 <input class="w3-input w3-border w3-margin-bottom" id="grad_year" type="number" name="grad_year" min="1950" max="2024" required placeholder="Enter graduation year">
-                
-                <!-- Recommendation rating dropdown -->
+                 
                 <label for="recommendation" class="w3-text-dark-grey" style="color: white;">How likely are you to recommend this school to prospective students?<span class="required"> * </span></label>
                 <select id="recommendation" name="recommendation" class="w3-input w3-border w3-margin-bottom" required>
                     <option value="" disabled selected>Click to select one</option>
@@ -307,17 +272,16 @@
                     <option value="Unlikely">Unlikely</option>
                 </select>
                 
-                <!-- Submit button -->
                 <button class="w3-button w3-block w3-dark-grey w3-margin-top w3-hover-light-grey" type="submit">Submit</button>
             </form>
         </section>
     </div>
 
-    <!-- Footer content -->
-    <footer class="footer">
-        <p>&copy; 2024 George Mason University | Computer Science Department</p>
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-    </footer>
+        <!-- footer -->
+        <footer class="footer">
+            <p>&copy; 2024 George Mason University | Computer Science Department</p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </footer>
 </body>
 
 </html>
